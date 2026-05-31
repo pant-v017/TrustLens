@@ -15,9 +15,6 @@ venv/
 # Study data — never push raw participant data to GitHub
 study/responses/*.csv
 
-# Model artifacts
-models/*.pkl
-models/*.json
 
 # OS
 .DS_Store
