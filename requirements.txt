@@ -16,3 +16,31 @@ seaborn==0.13.2
 
 # Utilities
 joblib==1.4.2
+
+
+
+# Initialize git in your folder
+git init
+
+# Connect to the GitHub repo you created in Part A
+# Replace YOUR_USERNAME with your actual GitHub username
+git remote add origin https://github.com/pant-v017/trustlens.git
+
+# Stage all your files
+git add .
+
+# Your very first commit
+git commit -m "Day 1: project scaffold, folder structure, README, requirements"
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
+
+git config --global user.email "vasudev21june@gmail.com"
+git config --global user.name "pant-v017"
+
+
+
+
+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 - Token ID
