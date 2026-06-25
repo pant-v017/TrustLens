@@ -428,15 +428,55 @@ def init_session():
 
 
 # ----------------------------------------------------------------------------
-# Save a participant's responses to CSV
+# Save a participant's responses to Google Sheets
 # ----------------------------------------------------------------------------
-def save_responses():
-    os.makedirs("responses", exist_ok=True)
-    df = pd.DataFrame(st.session_state.responses)
-    fname = f"responses/{st.session_state.participant_id}.csv"
-    df.to_csv(fname, index=False)
-    return fname
+# Columns saved per participant, in order
+RESPONSE_COLUMNS = [
+    "participant_id", "condition", "case_number", "ai_decision", "ai_confidence",
+    "initial_trust", "final_trust", "trust_shift", "understand", "fairness",
+    "action", "open_response", "wanted_more_explanation", "timestamp",
+]
 
+
+@st.cache_resource
+def get_worksheet():
+    """Connects to the Google Sheet using a service account from Streamlit Secrets."""
+    try:
+        scopes = [
+            "https://www.googleapis.com/auth/spreadsheets",
+            "https://www.googleapis.com/auth/drive",
+        ]
+        creds = Credentials.from_service_account_info(
+            st.secrets["gcp_service_account"], scopes=scopes
+        )
+        client = gspread.authorize(creds)
+        sheet = client.open(st.secrets["sheet_name"]).sheet1
+        if not sheet.get_all_values():
+            sheet.append_row(RESPONSE_COLUMNS)
+        return sheet
+    except Exception as e:
+        print(f"Google Sheets connection failed: {e}")
+        return None
+
+
+def save_responses():
+    """Appends this participant's rows to the Google Sheet; falls back to CSV."""
+    rows = st.session_state.responses
+    sheet = get_worksheet()
+
+    if sheet is not None:
+        try:
+            payload = [[str(r.get(col, "")) for col in RESPONSE_COLUMNS]
+                       for r in rows]
+            sheet.append_rows(payload)
+            return "google_sheets"
+        except Exception as e:
+            print(f"Google Sheets write failed, falling back to CSV: {e}")
+
+    os.makedirs("responses", exist_ok=True)
+    fname = f"responses/{st.session_state.participant_id}.csv"
+    pd.DataFrame(rows).to_csv(fname, index=False)
+    return fname
 
 # ============================================================================
 # MAIN APP
