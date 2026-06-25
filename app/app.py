@@ -114,9 +114,9 @@ st.markdown("""
 # ----------------------------------------------------------------------------
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load("model/xgboost_model.pkl")
-    threshold = joblib.load("model/decision_threshold.pkl")
-    features = joblib.load("model/feature_names.pkl")
+    model = joblib.load("xgboost_model.pkl")
+    threshold = joblib.load("decision_threshold.pkl")
+    features = joblib.load("feature_names.pkl")
     with open("data/study_cases.json") as f:
         cases = json.load(f)
     explainer = shap.TreeExplainer(model)
