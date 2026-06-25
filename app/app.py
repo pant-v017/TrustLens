@@ -115,29 +115,29 @@ st.markdown("""
 import os
 
 @st.cache_resource
+@st.cache_resource
 def load_artifacts():
-    # 1. Get the folder where app.py lives (/mount/src/trustlens/app)
+    # 1. Find the root path
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    # 2. Go one level up to the root folder (/mount/src/trustlens)
     root_dir = os.path.dirname(current_dir)
     
-    # 3. Create absolute paths to your files
-    model_path = os.path.join(root_dir, "xgboost_model.pkl")
-    threshold_path = os.path.join(root_dir, "decision_threshold.pkl")
-    features_path = os.path.join(root_dir, "feature_names.pkl")
-    data_path = os.path.join(root_dir, "study_cases.json") # Adjust if this is elsewhere
-
-    # 4. Load the files using the absolute paths
-    model = joblib.load(model_path)
-    threshold = joblib.load(threshold_path)
-    features = joblib.load(features_path)
-    with open(data_path) as f:
-        cases = json.load(f)
+    # 2. Print out the directory structure to help us find the files
+    st.error("🔍 Directory Diagnostic Map:")
+    
+    st.write(f"**Root directory folder contents ({root_dir}):**")
+    try:
+        st.write(os.listdir(root_dir))
+    except Exception as e:
+        st.write(f"Error reading root: {e}")
         
-    explainer = shap.TreeExplainer(model)
-    return model, threshold, features, cases, explainer
+    st.write(f"**App directory folder contents ({current_dir}):**")
+    try:
+        st.write(os.listdir(current_dir))
+    except Exception as e:
+        st.write(f"Error reading app folder: {e}")
 
+    # Temporary stop so the app doesn't crash on the missing model file yet
+    st.stop()
 
 # Human-readable labels for the loan profile display
 PROFILE_LABELS = {
