@@ -22,6 +22,8 @@ import os
 import random
 from datetime import datetime
 
+import gspread
+from google.oauth2.service_account import Credentials
 # Condition rotation — sequential counterbalancing (A → B → C → A ...)
 COUNTER_FILE = os.path.join("responses", "assignment_counter.json")
 CONDITIONS    = ["A", "B", "C"]
@@ -477,7 +479,6 @@ def save_responses():
     fname = f"responses/{st.session_state.participant_id}.csv"
     pd.DataFrame(rows).to_csv(fname, index=False)
     return fname
-
 # ============================================================================
 # MAIN APP
 # ============================================================================
