@@ -41,6 +41,10 @@ git config --global user.email "vasudev21june@gmail.com"
 git config --global user.name "pant-v017"
 
 
-
-
 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 - Token ID
+
+
+App links
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.16.16.205:8501
