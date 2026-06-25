@@ -115,29 +115,45 @@ st.markdown("""
 import os
 
 @st.cache_resource
-@st.cache_resource
 def load_artifacts():
-    # 1. Find the root path
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    root_dir = os.path.dirname(current_dir)
+    # 1. Determine the two possible directories where files could be
+    app_dir = os.path.dirname(os.path.abspath(__file__))  # /mount/src/trustlens/app
+    root_dir = os.path.dirname(app_dir)                  # /mount/src/trustlens
     
-    # 2. Print out the directory structure to help us find the files
-    st.error("🔍 Directory Diagnostic Map:")
-    
-    st.write(f"**Root directory folder contents ({root_dir}):**")
-    try:
-        st.write(os.listdir(root_dir))
-    except Exception as e:
-        st.write(f"Error reading root: {e}")
+    # 2. Check where 'xgboost_model.pkl' actually exists
+    if os.path.exists(os.path.join(app_dir, "xgboost_model.pkl")):
+        target_dir = app_dir
+    elif os.path.exists(os.path.join(root_dir, "xgboost_model.pkl")):
+        target_dir = root_dir
+    else:
+        # If not found anywhere, raise a descriptive error instead of freezing
+        root_files = os.listdir(root_dir) if os.path.exists(root_dir) else []
+        app_files = os.listdir(app_dir) if os.path.exists(app_dir) else []
+        raise FileNotFoundError(
+            f"Could not find 'xgboost_model.pkl' in root ({root_files}) or app folder ({app_files})."
+        )
         
-    st.write(f"**App directory folder contents ({current_dir}):**")
-    try:
-        st.write(os.listdir(current_dir))
-    except Exception as e:
-        st.write(f"Error reading app folder: {e}")
+    # 3. Create full absolute paths based on the correct folder found
+    model_path = os.path.join(target_dir, "xgboost_model.pkl")
+    threshold_path = os.path.join(target_dir, "decision_threshold.pkl")
+    features_path = os.path.join(target_dir, "feature_names.pkl")
+    
+    # Check for study_cases.json in the same folder, fallback to root/data if needed
+    data_path = os.path.join(target_dir, "study_cases.json")
+    if not os.path.exists(data_path):
+        data_path = os.path.join(root_dir, "data", "study_cases.json")
 
-    # Temporary stop so the app doesn't crash on the missing model file yet
-    st.stop()
+    # 4. Safely load everything
+    model = joblib.load(model_path)
+    threshold = joblib.load(threshold_path)
+    features = joblib.load(features_path)
+    
+    with open(data_path, "r") as f:
+        cases = json.load(f)
+        
+    explainer = shap.TreeExplainer(model)
+    
+    return model, threshold, features, cases, explainer
 
 # Human-readable labels for the loan profile display
 PROFILE_LABELS = {
