@@ -112,15 +112,32 @@ st.markdown("""
 # ----------------------------------------------------------------------------
 # Load model artifacts (cached so they load once)
 # ----------------------------------------------------------------------------
+import os
+
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load("xgboost_model.pkl")
-    threshold = joblib.load("decision_threshold.pkl")
-    features = joblib.load("feature_names.pkl")
-    with open("data/study_cases.json") as f:
+    # 1. Get the folder where app.py lives (/mount/src/trustlens/app)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # 2. Go one level up to the root folder (/mount/src/trustlens)
+    root_dir = os.path.dirname(current_dir)
+    
+    # 3. Create absolute paths to your files
+    model_path = os.path.join(root_dir, "xgboost_model.pkl")
+    threshold_path = os.path.join(root_dir, "decision_threshold.pkl")
+    features_path = os.path.join(root_dir, "feature_names.pkl")
+    data_path = os.path.join(root_dir, "study_cases.json") # Adjust if this is elsewhere
+
+    # 4. Load the files using the absolute paths
+    model = joblib.load(model_path)
+    threshold = joblib.load(threshold_path)
+    features = joblib.load(features_path)
+    with open(data_path) as f:
         cases = json.load(f)
+        
     explainer = shap.TreeExplainer(model)
     return model, threshold, features, cases, explainer
+
 
 # Human-readable labels for the loan profile display
 PROFILE_LABELS = {
