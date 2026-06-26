@@ -112,6 +112,6 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 ##### ***W.P. Carey School of Business*** | ***Arizona State University***
 ##### ***Mail : vasudev21june@gmail.com***
 
-##### **Research focus: Human-Centered Trustworthy AI, Explainability, Algorithmic Fairness**
+##### ***Research focus: Human-Centered Trustworthy AI, Explainability, Algorithmic Fairness****
 
 ---
