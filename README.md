@@ -86,7 +86,7 @@ streamlit run app/main.py
 
 ---
 
-## Related Publications (Author)
+## Related Publications (Co-Author)
 
 - *"Transparency and Accountability in AI Decision-Making: Methods and Challenges"*
 - *"Performance Impact of Machine Unlearning in AI Systems"*
@@ -106,10 +106,11 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 
 ## Author
 
-**[Your Name]**
-MS Business Analytics, Arizona State University
+**Vasudev Pant**
+MS Business Analytics
+W.P. Carey School of Business
+Arizona State University
+Mail : vasudev21june@gmail.com
 Research focus: Human-Centered Trustworthy AI, Explainability, Algorithmic Fairness
 
 ---
-
-*Built as part of a PhD application portfolio in HCI / Human-Centered AI.*
