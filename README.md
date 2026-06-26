@@ -9,17 +9,16 @@
 TrustLens is a live, deployed human-subjects study. Visitors are assigned one of three explanation conditions (minimal, text, or visual) and review six AI-assisted loan decisions, rating their trust before and after seeing 
 the AI's reasoning.
 
-> **Note for reviewers:** Each visitor is randomly assigned one condition. 
-> To explore all three explanation styles, you may revisit the link in a new session.
+> ***Note for reviewers:*** ***Each visitor is randomly assigned one condition. To explore all three explanation styles, you may revisit the link in a new session.***
 ---
 
 ## Research Questions
 
-**RQ1 — Trust Calibration** : How do different AI explanation modalities (minimal, textual, and visual) influence the accuracy of user trust calibration — defined as the alignment between expressed confidence and actual AI correctness — in high-stakes loan decision-making?
+**RQ1 — Trust Calibration** : ***How do different AI explanation modalities (minimal, textual, and visual) influence the accuracy of user trust calibration — defined as the alignment between expressed confidence and actual AI correctness — in high-stakes loan decision-making?***
 
-**RQ2 — Decision Agency** : Does the type of AI explanation modality influence user override behavior, independent of stated trust levels, revealing a gap between what users say they trust and what they actually act on?
+**RQ2 — Decision Agency** : ***Does the type of AI explanation modality influence user override behavior, independent of stated trust levels, revealing a gap between what users say they trust and what they actually act on?***
 
-**RQ3 — Fairness Perception** : How does exposure to feature-level SHAP explanations — which may surface demographic proxies — affect users' perceived algorithmic fairness, and does fairness perception moderate trust calibration?
+**RQ3 — Fairness Perception** : ***How does exposure to feature-level SHAP explanations — which may surface demographic proxies — affect users' perceived algorithmic fairness, and does fairness perception moderate trust calibration?***
 
 ---
 
@@ -102,9 +101,9 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 
 ## Theoretical Grounding
 
-- Schemmer et al. (2023) — Appropriate Reliance on AI
-- Vasconcelos et al. (2023) — Explanations and Appropriate Reliance
-- Buccinca et al. (2021) — Trust or Think: Cognitive Forcing Functions
+- ***Schemmer et al. (2023) — Appropriate Reliance on AI Advice: Conceptualization and the Effect of Explanations***
+- ***Vasconcelos et al. (2023) — Explanations Can Reduce Overreliance on AI Systems During Decision-Making***
+- ***Buccinca et al. (2021) — Trust or Think: Cognitive Forcing Functions***
 
 ---
 
@@ -116,6 +115,6 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 ##### ***W.P. Carey School of Business*** | ***Arizona State University***
 ##### ***Mail : vasudev21june@gmail.com***
 
-##### ***Research focus: Human-Centered Trustworthy AI, Explainability, Algorithmic Fairness****
+##### ***Research focus: Human-Centered Trustworthy AI, Explainability, Algorithmic Fairness***
 
 ---
