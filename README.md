@@ -2,7 +2,8 @@
 
 **Trust Calibration, Decision Agency, and Fairness Perception Across Explanation Modalities in AI-Assisted Loan Decision-Making**
 
-**Try it here :** [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://trustlens-study.streamlit.app/)
+**Try it here**
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://trustlens-study.streamlit.app/)
 
 ---
 
