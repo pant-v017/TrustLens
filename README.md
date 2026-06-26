@@ -106,9 +106,9 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 
 ## Author
 
-**Vasudev Pant**
+###Vasudev Pant
 
--**MS Business Analytics**
+**MS Business Analytics**
 
 **W.P. Carey School of Business**
 
