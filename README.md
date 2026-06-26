@@ -2,9 +2,15 @@
 
 **Trust Calibration, Decision Agency, and Fairness Perception Across Explanation Modalities in AI-Assisted Loan Decision-Making**
 
-**Try it here**
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://trustlens-study.streamlit.app/)
+## 🔗 Live Study
 
+**Try it here:** [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://trustlens-study.streamlit.app/)
+
+TrustLens is a live, deployed human-subjects study. Visitors are assigned one of three explanation conditions (minimal, text, or visual) and review six AI-assisted loan decisions, rating their trust before and after seeing 
+the AI's reasoning.
+
+> **Note for reviewers:** Each visitor is randomly assigned one condition. 
+> To explore all three explanation styles, you may revisit the link in a new session.
 ---
 
 ## Research Questions
