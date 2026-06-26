@@ -83,7 +83,7 @@ streamlit run app/main.py
 
 ## User Study Design
 
-- **Participants** — 15 to 25
+- **Participants** — 15 to 20
 - **Task** — Review 6 loan applicant profiles and evaluate AI recommendations
 - **Measures** — 7-item Likert survey + override decision + open-ended response
 - **Analysis** — Kruskal-Wallis, Mann-Whitney pairwise, chi-square for override rates
