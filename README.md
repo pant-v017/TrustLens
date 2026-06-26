@@ -107,6 +107,7 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 ## Author
 
 -**Vasudev Pant**
+
 -***MS Business Analytics***
 -***W.P. Carey School of Business***
 -***Arizona State University***
