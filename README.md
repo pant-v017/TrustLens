@@ -109,9 +109,13 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 -**Vasudev Pant**
 
 -***MS Business Analytics***
+
 -***W.P. Carey School of Business***
+
 -***Arizona State University***
+
 -***Mail : vasudev21june@gmail.com***
+
 -***Research focus: Human-Centered Trustworthy AI, Explainability, Algorithmic Fairness***
 
 ---
