@@ -15,11 +15,14 @@ the AI's reasoning.
 
 ## Research Questions
 
-**RQ1 — Trust Calibration** : How do different AI explanation modalities (minimal, textual, and visual) influence the accuracy of user trust calibration — defined as the alignment between expressed confidence and actual AI correctness — in high-stakes loan decision-making?
+**RQ1 — Trust Calibration**
+How do different AI explanation modalities (minimal, textual, and visual) influence the accuracy of user trust calibration — defined as the alignment between expressed confidence and actual AI correctness — in high-stakes loan decision-making?
 
-**RQ2 — Decision Agency** : Does the type of AI explanation modality influence user override behavior, independent of stated trust levels, revealing a gap between what users say they trust and what they actually act on?
+**RQ2 — Decision Agency**
+Does the type of AI explanation modality influence user override behavior, independent of stated trust levels, revealing a gap between what users say they trust and what they actually act on?
 
-**RQ3 — Fairness Perception** : How does exposure to feature-level SHAP explanations — which may surface demographic proxies — affect users' perceived algorithmic fairness, and does fairness perception moderate trust calibration?
+**RQ3 — Fairness Perception** 
+How does exposure to feature-level SHAP explanations — which may surface demographic proxies — affect users' perceived algorithmic fairness, and does fairness perception moderate trust calibration?
 
 ---
 
