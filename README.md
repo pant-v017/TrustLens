@@ -118,6 +118,6 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 ##### ***M.S. Business Analytics Candidate - W.P. Carey School of Business, Arizona State University***
 ##### ***Primary : vasudev21june@gmail.com***
 ##### ***Academic : vpant12@asu.edu***
-##### ***Research focus: Human-Centered Trustworthy AI, Explainability and, Algorithmic Fairness***
+##### ***Research focus: Human-Centered Trustworthy AI, Explainability and, Algorithmic Fairness, Trust Callibration***
 
 ---
