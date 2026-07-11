@@ -34,9 +34,12 @@ the AI's reasoning.
 
 ## What TrustLens Measures?
 
-1. **Trust Calibration Score** — measures whether user confidence matches AI accuracy on a per-case basis, not just whether users trust AI more or less
-2. **Override Behavior** — captures what users *do*, not just what they *say*, revealing the explanation-action gap
-3. **Fairness Perception under Explanation Exposure** — examines whether SHAP feature visibility affects perceived algorithmic fairness and moderates trust
+Much research on AI explanations asks a single question: do explanations make people trust AI more? TrustLens takes a narrower but more revealing angle — looking at trust *quality* and *behavior* rather than trust *quantity*. It brings together four measures that are usually studied in isolation:
+
+1. **Trust Calibration Metric** — a three-component measure (calibration score, overtrust index, undertrust index) capturing whether a user's confidence matches the AI's actual correctness on each case, rather than whether they trust the AI more or less overall.
+2. **Trust Shift** — trust is measured *before* and *after* the explanation is revealed, quantifying how much each explanation format actually moves a participant's trust.
+3. **Decision Agency (Override Behavior)** — captures what users *do*, not only what they *say*, surfacing the explanation–action gap.
+4. **Fairness Perception under Explanation Exposure** — tests whether the visibility of demographic-proxy features in SHAP explanations affects perceived algorithmic fairness, and whether fairness perception moderates trust calibration.
 
 ---
 
@@ -89,12 +92,12 @@ streamlit run app/main.py
 
 ---
 
-## Related Publications (Co-Author)
+## Related Publications (Co-Authored with Dr. Narendra Kumar)
 
 - *"Transparency and Accountability in AI Decision-Making: Methods and Challenges"*
 - *"Performance Impact of Machine Unlearning in AI Systems"*
 
-Both accepted in: **Machine Unlearning: Ethical and Responsible AI**
+Both accepted in: **Machine Unlearning: Ethical and Responsible AI, Machine Learning and Retraining (Both of the papers are peer reviewed and will be added as the chapters of this book (Currently, the book is under process))**
 
 Wiley-Scrivener | Scopus-indexed | forthcoming
 
@@ -112,10 +115,9 @@ Wiley-Scrivener | Scopus-indexed | forthcoming
 
 ### Vasudev Pant
 
-##### ***M.S. Business Analytics***
-##### ***W.P. Carey School of Business*** | ***Arizona State University***
-##### ***Mail : vasudev21june@gmail.com***
-
-##### ***Research focus: Human-Centered Trustworthy AI, Explainability, Algorithmic Fairness***
+##### ***M.S. Business Analytics Candidate - W.P. Carey School of Business, Arizona State University***
+##### ***Primary : vasudev21june@gmail.com***
+##### ***Academic : vpant12@asu.edu***
+##### ***Research focus: Human-Centered Trustworthy AI, Explainability, Algorithmic Fairness,***
 
 ---
