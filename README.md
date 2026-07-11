@@ -32,7 +32,7 @@ the AI's reasoning.
 
 ---
 
-## Key Novel Contributions
+## What TrustLens Measures?
 
 1. **Trust Calibration Score** — measures whether user confidence matches AI accuracy on a per-case basis, not just whether users trust AI more or less
 2. **Override Behavior** — captures what users *do*, not just what they *say*, revealing the explanation-action gap
